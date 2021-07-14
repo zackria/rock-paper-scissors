@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .wrapper {
+        margin: auto;
+        width: 50%;
+        border: 3px solid none;
+        padding: 10px;
+        text-align: center;
+      }
+      .form-signin-heading{
+         font-size: 30px;
+         font-weight: bold;
+      }
+
+      input{
+        font-size: 30px;
+      }
+
+      .button {
+        background-color: #008CBA; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        width:500px;
+      }
+    </style>
+  </head>
+  <body>
+      <h1 style="text-align:center;">CGI Rock Papers Scissors Tournament</h1>
+    <div class="wrapper">
+    <form class="form-signin" action="./index.html" method="get">
+    <label for="p1Name"><span class="form-signin-heading">Player 1 Name:</span></label>&nbsp;&nbsp;
+    <input type="text" id="p1Name" name="p1Name" value="Player 1" class="form-control"><br>
+    <label for="p2Name"><span class="form-signin-heading">Player 2 Name:</span></label>&nbsp;&nbsp;
+    <input type="text" id="p2Name" name="p2Name" value="Player 2" class="form-control"><br><br>
+    <input type="submit" value="Submit" class="button">
+    </form>
+    </div>
+  </body>
+</html>
