@@ -112,13 +112,14 @@ function makeSelection(selection, selection1) {
   var p1Score =  parseInt(yourScoreSpan.innerText);
   var p2Score =  parseInt(computerScoreSpan.innerText);
 
-  if(p1Score===bestof){
+  if(p1Score===bestof||p1Score>bestof){
      document.getElementById("myModal").style.display = "block";
+
      document.getElementById("winnerplace").innerText = p1Name +" Won the Game!";
      if(isSoundOn){
        winnerSound.play();
      }
-  }else if (p2Score===bestof){
+  }else if (p2Score===bestof||p2Score>bestof){
      document.getElementById("myModal").style.display = "block";
      document.getElementById("winnerplace").innerText = p2Name + " Won the Game!";
      if(isSoundOn){
