@@ -1,18 +1,5 @@
 # rock-paper-scissors
-Simple multiplayer rock paper scissors system
 
+Simple Two Player Rock Paper Scissors application using HTML CSS and JavaScript
 
-Created from Multibuzzer [https://github.com/wsun/multibuzzer](https://github.com/wsun/multibuzzer)
-
-
-Built using Create React App and boardgame.io
-
-Please open an issue if you experience a bug or have product feedback!
-
-## Development
--  Prerequisites: node and a package manager (e.g. npm, yarn)
--  Run yarn install to install dependencies
--  Run yarn dev to run local client on localhost:4000 and local server on localhost:4001
-
-## Deployment
--  React app will be built using yarn build and served through Koa server (same server used for boardgame.io server and lobby)
+URL [https://zackria.github.io/rock-paper-scissors/index.html](https://zackria.github.io/rock-paper-scissors/index.html)
