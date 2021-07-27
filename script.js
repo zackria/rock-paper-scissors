@@ -1,9 +1,12 @@
 const finalColumn = document.querySelector('[data-final-column]')
 const computerScoreSpan = document.querySelector('[data-computer-score]')
 const yourScoreSpan = document.querySelector('[data-your-score]')
+const throwSound = document.getElementById("throwSound")
+const winnerSound = document.getElementById("winnerSound")
 var p1Name = "Player 1"
 var p2Name = "Player 2"
 var bestof = 3
+var isSoundOn = false;
 
 const SELECTIONS = [
   {
@@ -23,6 +26,15 @@ const SELECTIONS = [
   }
 ]
 
+function flipSound(){
+  if(isSoundOn){
+    isSoundOn = false;
+    document.getElementById('soundlink').innerText="Turn On Sound";
+  }else{
+    isSoundOn = true;
+    document.getElementById('soundlink').innerText="Turn Off Sound";
+  }
+}
 
 function player1Selection(selectionvalue){
     //alert(selectionvalue);
@@ -44,6 +56,10 @@ function throwTurn(){
     if(p1Selection.length===0||p2Selection.length===0){
       alert("Please make a selection");
     }else{
+
+      if(isSoundOn){
+        throwSound.play();
+      }
 
       const selection1 = SELECTIONS.find(selection => selection.name === p1Selection);
 
@@ -99,9 +115,15 @@ function makeSelection(selection, selection1) {
   if(p1Score===bestof){
      document.getElementById("myModal").style.display = "block";
      document.getElementById("winnerplace").innerText = p1Name +" Won the Game!";
+     if(isSoundOn){
+       winnerSound.play();
+     }
   }else if (p2Score===bestof){
      document.getElementById("myModal").style.display = "block";
      document.getElementById("winnerplace").innerText = p2Name + " Won the Game!";
+     if(isSoundOn){
+       winnerSound.play();
+     }
   }
 }
 
